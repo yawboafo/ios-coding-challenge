@@ -749,7 +749,7 @@
 				A6B5E74827F6B7D9008FF308 /* Countries 2.xcdatamodel */,
 				1AF93B0F240EB2F400355AE7 /* Countries.xcdatamodel */,
 			);
-			currentVersion = 1AF93B0F240EB2F400355AE7 /* Countries.xcdatamodel */;
+			currentVersion = A6B5E74827F6B7D9008FF308 /* Countries 2.xcdatamodel */;
 			path = Countries.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
