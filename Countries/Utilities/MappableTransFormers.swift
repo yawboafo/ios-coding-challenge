@@ -27,6 +27,6 @@ class MappableTransFormers{
            if let value = value {
                return Int(value.replacingOccurrences(of: ",", with: ""))
             }
-            return nil
+            return 0
         })
 }

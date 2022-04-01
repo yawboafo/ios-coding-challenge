@@ -56,6 +56,13 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
         if let country = countries?[indexPath.row] {
             cell.country.text = country.name
             cell.capital.text = country.capital
+            
+            //Hide Capital Labels if Capital is empty
+            if (country.capital ?? "").isEmpty {
+                cell.capital.isHidden = true
+                cell.capitalLabel.isHidden = true
+            }
+            
             cell.population.text = country.population
             cell.regionLabel.text = country.region
             cell.areaLabel.text = String(country.area)

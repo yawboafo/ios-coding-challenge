@@ -21,12 +21,16 @@ class Country: NSManagedObject, Mappable {
     
     required init?(map: Map) {
         
+        //The JSON response proves that capital can be nil,
+        // So we dont need to make it a requirement
+        // I removed the check for Capital
         guard map.JSON["name"] != nil,
-            map.JSON["capital"] != nil,
-            map.JSON["population"] != nil else {
-                //assertionFailure("Failed to create Country")
+              map.JSON["population"] != nil else {
+                assertionFailure("Failed to create Country")
                 return nil
         }
+        
+        
         
         super.init(entity: Self.entity(), insertInto: nil)
     }
@@ -35,7 +39,7 @@ class Country: NSManagedObject, Mappable {
         
         DispatchQueue.main.async {
             self.name <- map["name.common"]
-            self.capital <- (map["capital"],MappableTransFormers.ArrayToString)
+            self.capital <- (map["capital"],MappableTransFormers.ArrayToString) 
             self.population <- (map["population"],MappableTransFormers.inToCommaSeperatedString)
             self.region <- map["region"]
             self.area <- map["area"]

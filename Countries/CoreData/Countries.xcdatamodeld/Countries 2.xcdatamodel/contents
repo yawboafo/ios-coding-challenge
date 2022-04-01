@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Country" representedClassName="Country" syncable="YES">
         <attribute name="area" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="capital" attributeType="String"/>
+        <attribute name="capital" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="population" attributeType="String"/>
         <attribute name="region" optional="YES" attributeType="String"/>
