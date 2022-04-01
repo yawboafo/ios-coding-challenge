@@ -77,6 +77,7 @@
 		392AF5C9BC090983F77F3251 /* Pods_Countries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Countries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C5FD14DC385ED3C8B27BE9 /* Pods-Countries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Countries.release.xcconfig"; path = "Target Support Files/Pods-Countries/Pods-Countries.release.xcconfig"; sourceTree = "<group>"; };
 		A68202FC27F6AC7B00B99683 /* MappableTransFormers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableTransFormers.swift; sourceTree = "<group>"; };
+		A6B5E74827F6B7D9008FF308 /* Countries 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Countries 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -745,6 +746,7 @@
 		1AF93B0E240EB2F400355AE7 /* Countries.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A6B5E74827F6B7D9008FF308 /* Countries 2.xcdatamodel */,
 				1AF93B0F240EB2F400355AE7 /* Countries.xcdatamodel */,
 			);
 			currentVersion = 1AF93B0F240EB2F400355AE7 /* Countries.xcdatamodel */;
