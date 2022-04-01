@@ -8,6 +8,15 @@
 
 import Foundation
 
+
+extension String{
+    
+    var cleanString : String{
+        return self.lowercased().replacingOccurrences(of: " ", with: "")
+    }
+    
+}
+
 extension Formatter {
     static let withSeparator: NumberFormatter = {
         let formatter = NumberFormatter()

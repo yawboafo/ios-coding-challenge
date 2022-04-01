@@ -13,7 +13,7 @@ import ObjectMapper
 
 @objc(Country)
 class Country: NSManagedObject, Mappable {
-    
+   
     
     private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
         super.init(entity: entity, insertInto: context)
@@ -21,9 +21,9 @@ class Country: NSManagedObject, Mappable {
     
     required init?(map: Map) {
         
-        //The JSON response proves that capital can be nil,
-        // So we dont need to make it a requirement
-        // I removed the check for Capital
+        //The JSON response proves that some countries dont have capitals,
+        // So we can make the capital less strick
+        // I've removed the required check for capital in the JSON
         guard map.JSON["name"] != nil,
               map.JSON["population"] != nil else {
                 assertionFailure("Failed to create Country")

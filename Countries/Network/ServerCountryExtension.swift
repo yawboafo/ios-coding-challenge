@@ -24,7 +24,7 @@ extension Server {
             
             DispatchQueue.main.async {
                 //Sort Country before delivering to View
-                let sortedCountries = (response as? [Country] ?? []).sorted{ ($0.name ?? "") < ($1.name ?? "") }
+                let sortedCountries = (response as? [Country] ?? []).sorted()
                 completionHandler(sortedCountries,nil)
             }
         }

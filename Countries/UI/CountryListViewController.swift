@@ -57,7 +57,7 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
             cell.country.text = country.name
             cell.capital.text = country.capital
             
-            //Hide Capital Labels if Capital is empty
+            //Hide Capital Labels if capital value is empty
             if (country.capital ?? "").isEmpty {
                 cell.capital.isHidden = true
                 cell.capitalLabel.isHidden = true

@@ -137,6 +137,7 @@ class Server {
                 switch response.result {
                 case .success(let value):
                     
+                    
                     value.forEach {DataStore.shared.viewContext.insert($0 as! NSManagedObject)}
                     
                     do {
