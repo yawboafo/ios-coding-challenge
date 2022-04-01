@@ -13,17 +13,19 @@ import CoreData
 
 extension Server {
     
-    func countryList(completionHandler: @escaping ( _ mappedCountrie: [Country] ,_ error: Error?) -> Void ) {
+    func countryList(completionHandler: @escaping ( _ mappedCountrie: [Country]? ,_ error: Error?) -> Void ) {
         
         Server.shared.request(.get, path: "all", object: Country.self) { (response: [Mappable]?, error) in
             
             guard error == nil else {
-                completionHandler([],error)
+                completionHandler(nil,error)
                 return
             }
             
             DispatchQueue.main.async {
-                completionHandler((response as? [Country] ?? []),nil)
+                //Sort Countrie before delivering to View
+                let sortedCountries = (response as? [Country] ?? []).sorted{ ($0.name ?? "") < ($1.name ?? "") }
+                completionHandler(sortedCountries,nil)
             }
         }
     }

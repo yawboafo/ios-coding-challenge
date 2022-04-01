@@ -13,7 +13,8 @@ import ObjectMapper
 
 @objc(Country)
 class Country: NSManagedObject, Mappable {
-        
+    
+    
     private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
         super.init(entity: entity, insertInto: context)
     }
@@ -42,3 +43,5 @@ class Country: NSManagedObject, Mappable {
     }
     
 }
+
+
