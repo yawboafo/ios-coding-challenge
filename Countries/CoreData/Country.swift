@@ -36,6 +36,8 @@ class Country: NSManagedObject, Mappable {
             self.name <- map["name.common"]
             self.capital <- (map["capital"],MappableTransFormers.ArrayToString)
             self.population <- map["population"]
+            self.region <- map["region"]
+            self.area <- map["area"]
         }
     }
     

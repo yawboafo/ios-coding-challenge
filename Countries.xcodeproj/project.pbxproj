@@ -28,6 +28,7 @@
 		1AF93B2B240EB2F600355AE7 /* CountriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF93B2A240EB2F600355AE7 /* CountriesUITests.swift */; };
 		2C874CA63841404087A631D6 /* Pods_Countries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392AF5C9BC090983F77F3251 /* Pods_Countries.framework */; };
 		A68202FD27F6AC7B00B99683 /* MappableTransFormers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68202FC27F6AC7B00B99683 /* MappableTransFormers.swift */; };
+		A6B5E74A27F6BC32008FF308 /* NumericExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B5E74927F6BC32008FF308 /* NumericExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		94C5FD14DC385ED3C8B27BE9 /* Pods-Countries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Countries.release.xcconfig"; path = "Target Support Files/Pods-Countries/Pods-Countries.release.xcconfig"; sourceTree = "<group>"; };
 		A68202FC27F6AC7B00B99683 /* MappableTransFormers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableTransFormers.swift; sourceTree = "<group>"; };
 		A6B5E74827F6B7D9008FF308 /* Countries 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Countries 2.xcdatamodel"; sourceTree = "<group>"; };
+		A6B5E74927F6BC32008FF308 /* NumericExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				1AAA0341240EB8320073441E /* DictionaryExtension.swift */,
 				A68202FC27F6AC7B00B99683 /* MappableTransFormers.swift */,
+				A6B5E74927F6BC32008FF308 /* NumericExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF93B10240EB2F400355AE7 /* Countries.xcdatamodeld in Sources */,
+				A6B5E74A27F6BC32008FF308 /* NumericExtension.swift in Sources */,
 				1AAA0344240FACBC0073441E /* ServerCountryExtension.swift in Sources */,
 				1AF93B0A240EB2F400355AE7 /* SecondViewController.swift in Sources */,
 				1AF93B08240EB2F400355AE7 /* CountryListViewController.swift in Sources */,

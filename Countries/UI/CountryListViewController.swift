@@ -57,8 +57,8 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
             cell.country.text = country.name
             cell.capital.text = country.capital
             cell.population.text = String(country.population)
-            cell.regionLabel.text =
-            cell.areaLabel.text =
+            cell.regionLabel.text = country.region
+            cell.areaLabel.text = String(country.area)
 
             cell.accessibilityIdentifier = "\(country.name!)-Cell"
             cell.country.accessibilityIdentifier = "Country"
