@@ -11,6 +11,7 @@ import ObjectMapper
 
 class MappableTransFormers{
     
+   //Quickly Transform JSONObject Array  to String
    static let ArrayToString = TransformOf<String, [String]>(fromJSON: { (value: [String]?) -> String? in
         return String(value?.first ?? "")
     }, toJSON: { (value: String?) -> [String]? in
