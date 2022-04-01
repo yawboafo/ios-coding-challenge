@@ -34,7 +34,7 @@ class Country: NSManagedObject, Mappable {
         
         DispatchQueue.main.async {
             self.name <- map["name"]
-            self.capital <- map["capital"]
+            self.capital <- (map["capital"],MappableTransFormers.ArrayToString)
             self.population <- map["population"]
         }
     }
