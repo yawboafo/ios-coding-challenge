@@ -27,10 +27,10 @@ extension Country {
 
 extension Country : Identifiable,Comparable {
     static func ==(lhs: Country, rhs: Country) -> Bool {
-        return lhs.name! == rhs.name!
+        return (lhs.name ?? "") == (rhs.name ?? "")
       }
 
       static func <(lhs: Country, rhs: Country) -> Bool {
-          return lhs.name! < rhs.name!
+          return (lhs.name ?? "") < (rhs.name ?? "")
       }
 }
