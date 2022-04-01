@@ -23,7 +23,7 @@ class Country: NSManagedObject, Mappable {
         guard map.JSON["name"] != nil,
             map.JSON["capital"] != nil,
             map.JSON["population"] != nil else {
-                assertionFailure("Failed to create Country")
+                //assertionFailure("Failed to create Country")
                 return nil
         }
         
@@ -33,7 +33,7 @@ class Country: NSManagedObject, Mappable {
     func mapping(map: Map) {
         
         DispatchQueue.main.async {
-            self.name <- map["name"]
+            self.name <- map["name.common"]
             self.capital <- (map["capital"],MappableTransFormers.ArrayToString)
             self.population <- map["population"]
         }

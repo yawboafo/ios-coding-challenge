@@ -29,7 +29,7 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
         super.viewDidAppear(animated)
         
         HUD.show(in: view.window!)
-        Server.shared.countryList() { (error) in
+        Server.shared.countryList() { (data,error) in
             
             HUD.dismiss(from: self.view.window!)
             guard error == nil else {
@@ -37,6 +37,7 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
                 return
             }
             
+            self.countries = data
             self.countryTableView.reloadData()
         }
     }
@@ -56,7 +57,9 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
             cell.country.text = country.name
             cell.capital.text = country.capital
             cell.population.text = String(country.population)
-            
+            cell.regionLabel.text =
+            cell.areaLabel.text =
+
             cell.accessibilityIdentifier = "\(country.name!)-Cell"
             cell.country.accessibilityIdentifier = "Country"
             cell.capital.accessibilityIdentifier = "\(country.name!)-Capital"
