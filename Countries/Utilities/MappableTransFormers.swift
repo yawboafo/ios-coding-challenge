@@ -20,4 +20,13 @@ class MappableTransFormers{
             }
             return nil
         })
+    
+    static let inToCommaSeperatedString = TransformOf<String, Int>(fromJSON: { (value: Int?) -> String? in
+        return String(value?.formattedWithSeparator ?? "")
+    }, toJSON: { (value: String?) -> Int? in
+           if let value = value {
+               return Int(value.replacingOccurrences(of: ",", with: ""))
+            }
+            return nil
+        })
 }

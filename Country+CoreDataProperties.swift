@@ -1,8 +1,9 @@
 //
 //  Country+CoreDataProperties.swift
-//  
+//  Countries
 //
 //  Created by Yaw Koranteng Boafo on 01/04/2022.
+//  Copyright © 2022 James Weatherley. All rights reserved.
 //
 //
 
@@ -16,10 +17,14 @@ extension Country {
         return NSFetchRequest<Country>(entityName: "Country")
     }
 
+    @NSManaged public var area: Double
     @NSManaged public var capital: String?
     @NSManaged public var name: String?
-    @NSManaged public var population: Int32
-    @NSManaged public var area: Double
+    @NSManaged public var population: String?
     @NSManaged public var region: String?
+
+}
+
+extension Country : Identifiable {
 
 }

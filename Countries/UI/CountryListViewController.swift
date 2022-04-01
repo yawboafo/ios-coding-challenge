@@ -56,7 +56,7 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
         if let country = countries?[indexPath.row] {
             cell.country.text = country.name
             cell.capital.text = country.capital
-            cell.population.text = String(country.population)
+            cell.population.text = country.population
             cell.regionLabel.text = country.region
             cell.areaLabel.text = String(country.area)
 

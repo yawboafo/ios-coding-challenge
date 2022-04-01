@@ -17,7 +17,7 @@ extension Formatter {
     }()
 }
 
-extension Int32{
+extension Int{
     var formattedWithSeparator: String {
         return Formatter.withSeparator.string(for: self) ?? ""
     }
