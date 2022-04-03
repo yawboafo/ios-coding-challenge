@@ -47,7 +47,7 @@ class Server {
     }
     
     private convenience init() {
-        self.init(host: "restcountries.com", path: "/v3.1/all")
+        self.init(host: "restcountries.com", path: "/v3.1/")
     }
 
     
@@ -67,7 +67,7 @@ class Server {
     /// - returns: list of headers
     public func headers( extraHeaders: [String: String]? = nil ) -> [String: String] {
         
-        var headers: [String: String] = []
+        var headers: [String: String] = [:]
         
         if let extraHeaders = extraHeaders {
             headers += extraHeaders
@@ -136,6 +136,7 @@ class Server {
                 
                 switch response.result {
                 case .success(let value):
+                    
                     
                     value.forEach {DataStore.shared.viewContext.insert($0 as! NSManagedObject)}
                     

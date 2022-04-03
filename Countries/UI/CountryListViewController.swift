@@ -29,7 +29,7 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
         super.viewDidAppear(animated)
         
         HUD.show(in: view.window!)
-        Server.shared.countryList() { (error) in
+        Server.shared.countryList() { (data,error) in
             
             HUD.dismiss(from: self.view.window!)
             guard error == nil else {
@@ -37,6 +37,7 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
                 return
             }
             
+            self.countries = data
             self.countryTableView.reloadData()
         }
     }
@@ -49,13 +50,23 @@ class CountryListViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryTableViewCell") as! CountryTableViewCell
+        //Changed Identify to CountryInfoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryInfoCell") as! CountryTableViewCell
         
         if let country = countries?[indexPath.row] {
             cell.country.text = country.name
             cell.capital.text = country.capital
-            cell.population.text = String(country.population)
             
+            //Hide Capital Labels if capital value is empty
+            if (country.capital ?? "").isEmpty {
+                cell.capital.isHidden = true
+                cell.capitalLabel.isHidden = true
+            }
+            
+            cell.population.text = country.population
+            cell.regionLabel.text = country.region
+            cell.areaLabel.text = String(country.area)
+
             cell.accessibilityIdentifier = "\(country.name!)-Cell"
             cell.country.accessibilityIdentifier = "Country"
             cell.capital.accessibilityIdentifier = "\(country.name!)-Capital"
